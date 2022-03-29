@@ -1,0 +1,13 @@
+.header {
+  background: rgba(22, 67, 96, 0.82);
+  color: #f1f1f1;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 1rem 30px;
+}
+
+.active {
+  opacity: 0.5;
+  border-bottom: 1px solid rgba(255, 255, 0, 0.7);
+}

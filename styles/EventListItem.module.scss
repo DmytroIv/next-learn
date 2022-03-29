@@ -1,0 +1,31 @@
+.eventListItem {
+  background-color: #f1f1f1;
+  margin-bottom: 20px;
+  display: flex;
+  box-shadow: 1px 1px 7px 2px rgba(100,100,100, 0.25);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image {
+  background: no-repeat center / cover;
+  width: 200px;
+}
+
+.content {
+  padding: 10px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 200px);
+}
+
+.eventLink {
+  display: inline-flex;
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: #fafafa;
+  box-shadow: 1px 1px 3px 1px rgba(100,100,100, 0.25);
+  border-radius: 2px;
+  margin-left: auto;
+  margin-right: 0;
+}

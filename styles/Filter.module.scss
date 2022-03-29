@@ -1,0 +1,39 @@
+.filter {
+  background-color: #f1f1f1;
+  box-shadow: 1px 1px 7px 2px rgba(100,100,100, 0.25);
+  margin: 20px auto 10px;
+  border-radius: 20px;
+  padding: 20px 20px 10px;
+  display: table;
+
+  select,
+  button {
+    margin-bottom: 10px;
+  }
+
+  button {
+    max-width: 200px;
+  }
+}
+
+.filterContent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.label {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.error {
+  margin: 0;
+  text-align: right;
+  color: #b93131;
+}

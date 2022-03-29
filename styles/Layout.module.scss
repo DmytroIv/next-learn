@@ -1,0 +1,11 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(136, 162, 137, 0.24);
+}
+
+.main {
+  padding: 1rem;
+  flex: 1;
+}

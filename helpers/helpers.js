@@ -12,7 +12,3 @@ export const monthNames = [
   'November',
   'December',
 ];
-
-export const wrapLocationByComa = (location) => {
-  return location.replace(', ', '\n');
-};

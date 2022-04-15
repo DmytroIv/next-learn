@@ -1,6 +1,7 @@
-import { useReducer } from 'react';
+import { useContext, useReducer } from 'react';
 import { useRouter } from 'next/router';
 import { monthNames } from '@/helpers/helpers';
+import NotificationContext from '@/context/notification-context';
 
 import styles from '@/styles/Filter.module.scss';
 
@@ -26,6 +27,7 @@ const initialState = {};
 const Filter = ({ dates }) => {
   const router = useRouter();
   const [state, dispatch] = useReducer(reducer, initialState);
+  const notificationContext = useContext(NotificationContext);
 
   const selectHandler = (e) => {
     const { name, value } = e.target;
@@ -35,8 +37,12 @@ const Filter = ({ dates }) => {
   const submitHandler = () => {
     if (!state.month || !state.year) {
       dispatch({ type: SET_ERROR, error: 'Please select year & month' });
+
+      notificationContext.showNotification({ text: 'Alert you need to select month and year', status: 'danger' });
     } else {
       router.push(`/events/${state.year}/${state.month}`);
+
+      notificationContext.showNotification({ text: 'Success Filter request', status: 'success' });
     }
   };
 

@@ -53,3 +53,27 @@ select {
   border-radius: 2px;
   padding: 10px 12px;
 }
+
+//
+
+.notification {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  width: 300px;
+  padding: 12px;
+  border: 1px solid;
+
+  &.success {
+    border-color: #2c6b2c;
+    background: #6ab46a;
+  }
+  &.warning {
+    border-color: #6b5e2c;
+    background: #f3de5f;
+  }
+  &.danger {
+    border-color: #6b2c2c;
+    background: #ef5e5e;
+  }
+}

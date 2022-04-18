@@ -1,6 +1,7 @@
 .link {
   border-bottom: 2px solid transparent;
 
+  &:hover,
   &.active {
     color: rgba(225, 225, 225, 0.95);
     border-color: rgba(225, 225, 225, 0.75);

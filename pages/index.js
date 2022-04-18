@@ -7,7 +7,7 @@ export default function Home({ posts }) {
   return (
     <>
       <Head>
-        <title>Blogs</title>
+        <title>Home posts page</title>
       </Head>
       <Hero />
       <FeaturedPosts posts={posts} />

@@ -22,10 +22,8 @@ const ContactForm = () => {
 
     console.log(data);
 
-    console.log(noteCtx);
-
     noteCtx.setNoteData({
-      text: 'Message is saved.',
+      message: 'Message is saved.',
       state: 'success',
     });
   };

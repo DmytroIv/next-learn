@@ -20,8 +20,10 @@ async function contact(req, res) {
     if (mongoDBConnectionUrl) {
       let client;
 
+      const connectionString = `//mongoClusterKey//${process.env.mongodb_username}:${process.env.mongodb_password}`;
+
       try {
-        client = await MongoClient.connect('//mongoClusterKey');
+        client = await MongoClient.connect(connectionString);
       } catch (err) {
         return res.status(500).json({ message: 'Could not connect to mongoDB' });
       }

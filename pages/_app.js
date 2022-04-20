@@ -1,17 +1,15 @@
-import Head from 'next/head';
-import Layout from '@/components/Layout';
+import { SessionProvider } from 'next-auth/react';
 
+import Layout from '@/components/layout/layout';
 import '@/styles/globals.scss';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Head>
-        <meta name="description" content="Events" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Component {...pageProps} />
-    </Layout>
+    <SessionProvider session={pageProps.session}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </SessionProvider>
   );
 }
 

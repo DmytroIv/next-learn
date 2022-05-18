@@ -25,7 +25,7 @@ export const Up = (): JSX.Element => {
       className={ styles.up }
       initial={{opacity: 0}}
     >
-      <ButtonIcon onClick={ scrollToTop } appearance="primary" icon="up" />
+      <ButtonIcon onClick={ scrollToTop } appearance="primary" icon="up" aria-label="Up" />
     </motion.div>
   );
 };

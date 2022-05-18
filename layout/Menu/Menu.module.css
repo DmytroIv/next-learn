@@ -1,0 +1,82 @@
+.menu a {
+	overflow: hidden;
+
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.menu,
+.menu div {
+	overflow: hidden;
+
+	max-width: 100%;
+}
+
+.firstLevel {
+	display: grid;
+	grid-template-columns: 24px 1fr;
+
+	align-items: center;
+
+	margin-top: 16px;
+}
+
+.firstLevel,
+.firstLevel span {
+	transition: all 0.2s;
+}
+
+.firstLevel:hover,
+.firstLevelActive {
+	color: var(--primary);
+}
+
+.firstLevelActive span:first-child,
+.firstLevel:hover span:first-child {
+	text-shadow: 0 0 8px var(--primary);
+}
+
+.secondBlock {
+	margin-left: 6px;
+	padding-top: 16px;
+	padding-left: 18px;
+
+	border-left: 1px solid #DFDFDF;
+}
+
+.secondLevel {
+	margin-bottom: 10px;
+
+	cursor: pointer;
+	text-transform: uppercase;
+
+	color: var(--gray-dark);
+
+	outline-offset: -1px;
+
+	font-size: 12px;
+	font-weight: 300;
+}
+
+.secondLevelBlock {
+	overflow: hidden;
+}
+
+.thirdLevel {
+	display: block;
+
+	margin-bottom: 10px;
+
+	cursor: pointer;
+
+	color: var(--gray-dark);
+	outline-offset: -1px;
+
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.thirdLevel:hover,
+.thirdLevelActive {
+	color: var(--primary);
+}

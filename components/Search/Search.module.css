@@ -1,0 +1,22 @@
+.search {
+	position: relative;
+
+	width: 100%;
+}
+
+.input input {
+	width: 100%;
+	padding-right: 40px;
+}
+
+.button {
+	position: absolute;
+	top: 50%;
+	right: 0;
+
+	width: 30px;
+	height: 30px;
+	padding: 6px;
+
+	transform: translate(-3px, -50%);
+}

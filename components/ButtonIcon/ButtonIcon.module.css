@@ -1,0 +1,30 @@
+.button {
+	width: 40px;
+	height: 40px;
+
+	cursor: pointer;
+
+	border: 1px solid var(--primary);
+	border-radius: 5px;
+	background-color: var(--primary);
+}
+
+.primary {
+	color: var(--white);
+	background: var(--primary);
+}
+
+.primary:hover {
+	background: var(--primary-hover);
+}
+
+.white {
+	color: var(--black);
+	border: 1px solid var(--gray-light);
+	background: var(--white);
+}
+
+.white:hover {
+	color: var(--white);
+	background: var(--primary);
+}

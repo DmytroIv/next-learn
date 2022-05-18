@@ -13,18 +13,20 @@ import { Head } from "next/document";
 
 function TopPage({ page, products, firstCategory }: ITopPageProps): JSX.Element {
   return <>
-    <Head>
-      <title>{ page.metaTitle }</title>
-      <meta name="description" content={ page.metaDescription } />
+    { page && products && <>
+      <Head>
+        <title>{ page.metaTitle }</title>
+        <meta name="description" content={ page.metaDescription } />
 
-      <meta property="og:title" content={ page.metaTitle } />
-      <meta property="og:description" content={ page.metaDescription } />
-      <meta property="og:type" content="article" />
-    </Head>
-    <TopPageComponent page={ page }
-                      products={ products }
-                      firstCategory={ firstCategory }
-    />
+        <meta property="og:title" content={ page.metaTitle } />
+        <meta property="og:description" content={ page.metaDescription } />
+        <meta property="og:type" content="article" />
+      </Head>
+      <TopPageComponent page={ page }
+                        products={ products }
+                        firstCategory={ firstCategory }
+      />
+    </> }
   </>;
 }
 

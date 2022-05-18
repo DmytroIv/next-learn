@@ -27,13 +27,17 @@ export const Search = ({ className, ...props }: ISearchProps): JSX.Element => {
   };
 
   return (
-    <div className={ cn(className, styles.search) } { ...props }>
+    <form className={ cn(className, styles.search) } { ...props } role="search">
       <Input className={ styles.input }
              onChange={ (e) => setSearch(e.target.value) }
-             onKeyDown={handleKeyDown}
+             onKeyDown={ handleKeyDown }
              placeholder="Search..."
              value={ search } />
-      <Button appearance="primary" className={ styles.button } onClick={ goToSearch }>🔍</Button>
-    </div>
+      <Button appearance="primary"
+              className={ styles.button }
+              onClick={ goToSearch }
+              aria-label="Search on the site."
+      >🔍</Button>
+    </form>
   );
 };

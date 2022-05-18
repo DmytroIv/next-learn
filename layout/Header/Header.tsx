@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Sidebar } from "../Sidebar/Sidebar";
 import { ButtonIcon } from "../../components";
 import { IHeaderProps } from './Header.props';
@@ -11,6 +11,7 @@ import styles from './Header.module.css';
 export const Header = ({ className, ...props }: IHeaderProps): JSX.Element => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const router = useRouter();
+  const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
     setIsOpen(false);
@@ -25,7 +26,7 @@ export const Header = ({ className, ...props }: IHeaderProps): JSX.Element => {
       }
     },
     closed: {
-      opacity: 0,
+      opacity: shouldReduceMotion ? 1 : 0,
       x: '100%'
     }
   };

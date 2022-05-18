@@ -30,3 +30,7 @@
 	grid-template-columns: 20px 1fr;
 	gap: 12px;
 }
+
+.sortName {
+	display: none;
+}

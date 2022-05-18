@@ -12,6 +12,13 @@
 	max-width: 100%;
 }
 
+.menu ul {
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
 .firstLevel {
 	display: grid;
 	grid-template-columns: 24px 1fr;
@@ -51,8 +58,10 @@
 	text-transform: uppercase;
 
 	color: var(--gray-dark);
+	border: none;
 
 	outline-offset: -1px;
+	background: transparent;
 
 	font-size: 12px;
 	font-weight: 300;

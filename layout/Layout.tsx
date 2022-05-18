@@ -28,7 +28,7 @@ export const Layout = ({ children }: ILayoutProps): JSX.Element => {
          tabIndex={ 1 }>Go to main content</a>
       <Header className={ styles.header } />
       <Sidebar className={ styles.sidebar } />
-      <main className={ styles.body }>
+      <main className={ styles.body } role="main">
         <div tabIndex={0} ref={bodyRef} >{ children }</div>
       </main>
       <Footer className={ styles.footer } />

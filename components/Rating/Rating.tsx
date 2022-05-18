@@ -20,7 +20,6 @@ export const Rating = forwardRef(({
     constructRating(rating);
   }, [rating, tabIndex]);
 
-
   const handleKey = (e: KeyboardEvent<HTMLSpanElement>) => {
     if (!isEditable || !setRating) return;
 
@@ -78,6 +77,12 @@ export const Rating = forwardRef(({
         tabIndex={ computedFocus(rating, i) }
         onKeyDown={ handleKey }
         ref={ (r) => ratingArrayRef.current?.push(r) }
+        role={ isEditable ? 'slider' : '' }
+        aria-valuenow={ rating }
+        aria-valuemax={ 5 }
+        aria-valuemin={ 1 }
+        aria-label={ isEditable ? 'Set the rating' : `Rating ${ rating }` }
+        aria-invalid={ !!error }
       >
         { i < currRating ? '★️' : '☆' }
       </span>));
@@ -92,7 +97,7 @@ export const Rating = forwardRef(({
       { ...props }
     >
       { ratingArr.map((R: JSX.Element, i: number) => (<span key={ i }>{ R }</span>)) }
-      { error && <span className={ styles.errorMessage }>{ error.message }</span> }
+      { error && <span role="alert" className={ styles.errorMessage }>{ error.message }</span> }
     </div>
   );
 });
